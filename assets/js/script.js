@@ -4,15 +4,21 @@
 //https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}
 
 
+
+//http://api.openweathermap.org/data/2.5/forecast?q=newark&appid=c72883e6c6cd92c5004094d3728064f1 5 day forecast syntax
+
+
 var currentTime = moment().format("MM D YYYY hh:mm");
 
 var forecastData = {}
-
+var forecastRaw;
+// var cityLat = forecastRaw.city.coord.lat;
+// var cityLong= forecastRaw.city.coord.long
 
 //grab 5 day forecast
 
 function getForecast() {
-    var url = "https://api.openweathermap.org/data/2.5/weather?id=6167865&appid=c72883e6c6cd92c5004094d3728064f1";
+    var url = "http://api.openweathermap.org/data/2.5/forecast?q=newark&units=imperial&appid=c72883e6c6cd92c5004094d3728064f1";
     fetch(url)
       .then(function (response) {
         if (!response.ok) {
@@ -24,6 +30,8 @@ function getForecast() {
         forecastData = JSON.stringify(locRes);
         forecastParsed = JSON.parse(forecastData);
         console.log(locRes)
+        console.log(locRes)
+        forecastRaw = locRes;
       });
     };
     
