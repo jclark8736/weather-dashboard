@@ -32,15 +32,55 @@ let test;
 //TIME/DAY: console.log(forecastRaw.list[39].dt
 
 
+//day 1
+var dayOneWeather;
+var dayOneTemp;
+var dayOneHumid;
+var dayOneWind;
+var dayOneTime;
+
+
+//day 2
+let dayTwoWeather;
+let dayTwoTemp;
+let dayTwoHumid;
+let dayTwoWind;
+let dayTwoTime;
+
+
+//day 3
+let dayThreeWeather;
+let dayThreeTemp;
+let dayThreeHumid;
+let dayThreeWind;
+let dayThreeTime;
+
+
+
+//day 4
+let dayFourWeather;
+let dayFourTemp;
+let dayFourHumid;
+let dayFourWind;
+let dayFourTime;
+
+
+
+
+//day 5
+let dayFiveWeather;
+let dayFiveTemp;
+let dayFiveHumid;
+let dayFiveWind;
+let dayFiveTime;
+
+
+
+
+
 
 
 //grab 5 day forecast
-
-
-
-
-
-
 
 
 function getForecast() {
@@ -54,11 +94,15 @@ function getForecast() {
       })
       .then(function (locRes) {
         forecastData = JSON.stringify(locRes);
-        forecastParsed = JSON.parse(forecastData);
-        console.log(locRes)
         console.log(locRes)
         forecastRaw = locRes;
-        let test = Object.assign({}, forecastRaw.list[0],  forecastRaw.list[8],  forecastRaw.list[16])
+        //day 1
+        var dayOneWeather = forecastRaw.list[0].weather[0].main
+        var dayOneTemp = forecastRaw.list[0].main.temp
+        var dayOneHumid = forecastRaw.list[0].main.humidity
+        var dayOneWind =  forecastRaw.list[0].wind.speed
+        var dayOneTime = forecastRaw.list[0].dt
+        console.log(dayOneTime)
 
 
       });
