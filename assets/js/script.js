@@ -12,10 +12,36 @@ var currentTime = moment().format("MM D YYYY hh:mm");
 
 var forecastData = {}
 var forecastRaw;
+
+
+//
 // var cityLat = forecastRaw.city.coord.lat;
 // var cityLong= forecastRaw.city.coord.long
 
+
+
+
+
+//parse locations
+
+// WEATHER : console.log(forecastRaw.list[2].weather[0].main)
+//TEMPERATURE: console.log(forecastRaw.list[2].main.temp)
+//HUMIDITY : console.log(forecastRaw.list[2].main.humidity)
+//WIND SPEED : console.log(forecastRaw.list[2].wind.speed)
+//UV INDEX
+//TIME/DAY: console.log(forecastRaw.list[39].dt
+
+
+
+
 //grab 5 day forecast
+
+
+
+
+
+
+
 
 function getForecast() {
     var url = "http://api.openweathermap.org/data/2.5/forecast?q=newark&units=imperial&appid=c72883e6c6cd92c5004094d3728064f1";
