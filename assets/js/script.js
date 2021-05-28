@@ -10,10 +10,10 @@
 
 var currentTime = moment().format("MM D YYYY hh:mm");
 
-var forecastData = {}
+var forecastData = {};
 var forecastRaw;
-
-
+var forecastData5 = {};
+let test;
 //
 // var cityLat = forecastRaw.city.coord.lat;
 // var cityLong= forecastRaw.city.coord.long
@@ -58,6 +58,9 @@ function getForecast() {
         console.log(locRes)
         console.log(locRes)
         forecastRaw = locRes;
+        let test = Object.assign({}, forecastRaw.list[0],  forecastRaw.list[8],  forecastRaw.list[16])
+
+
       });
     };
     
