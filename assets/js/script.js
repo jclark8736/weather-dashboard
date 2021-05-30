@@ -19,7 +19,7 @@ var forecastRaw;
 var forecastData5 = {};
 let test;
 var buttonEl = document.getElementById("submit-btn");
-
+var dateString
 
 
 $("#submit-btn").on("click", function() {
@@ -37,19 +37,7 @@ $("#submit-btn").on("click", function() {
 
 
 
-
-
-
-//parse locations
-
-// WEATHER : console.log(forecastRaw.list[2].weather[0].main)
-//TEMPERATURE: console.log(forecastRaw.list[2].main.temp)
-//HUMIDITY : console.log(forecastRaw.list[2].main.humidity)
-//WIND SPEED : console.log(forecastRaw.list[2].wind.speed)
-//UV INDEX
-//TIME/DAY: console.log(forecastRaw.list[39].dt
-
-
+//DELETE LATER
 //day 1
 let dayOneWeather;
 let dayOneTemp;
@@ -131,17 +119,24 @@ function getForecast() {
         let dayOneHumid = forecastRaw.list[0].main.humidity
         let dayOneWind =  forecastRaw.list[0].wind.speed
         let dayOneTime = forecastRaw.list[0].dt
-        console.log (dayOneTime)
+        var dayOneDate= moment.unix(dayOneTime).format("MM/DD/YYYY");
+        console.log (dayOneDate)
+
+
+
+      
 
 
 
         //day 2
-        let dayTwoWeather = forecastRaw.list[8].weather[0].main
+        let dayTwoWeather = forecastRaw.list[8].weather[0].main.temp
         let dayTwoTemp = forecastRaw.list[8].main.temp
         let dayTwoHumid = forecastRaw.list[8].main.humidity
         let dayTwoWind =  forecastRaw.list[8].wind.speed
         let dayTwoTime = forecastRaw.list[8].dt
-        console.log (dayTwoTime)
+        
+        var dayTwoDate= moment.unix(dayTwoTime).format("MM/DD/YYYY");
+        console.log (dayTwoDate)
 
 
         //day 3
@@ -150,7 +145,9 @@ function getForecast() {
         let dayThreeHumid = forecastRaw.list[16].main.humidity
         let dayThreeWind =  forecastRaw.list[16].wind.speed
         let dayThreeTime = forecastRaw.list[16].dt
-        console.log (dayThreeTime)
+        
+        var dayThreeDate= moment.unix(dayThreeTime).format("MM/DD/YYYY");
+        console.log (dayThreeDate)
 
         // day 4
         let dayFourWeather = forecastRaw.list[24].weather[0].main
@@ -158,7 +155,9 @@ function getForecast() {
         let dayFourHumid = forecastRaw.list[24].main.humidity
         let dayFourWind =  forecastRaw.list[24].wind.speed
         let dayFourTime = forecastRaw.list[24].dt
-        console.log (dayFourTime)
+        
+        var dayFourDate= moment.unix(dayFourTime).format("MM/DD/YYYY");
+        console.log (dayFourDate)
 
 
         //day five
@@ -168,7 +167,9 @@ function getForecast() {
         let dayFiveHumid = forecastRaw.list[32].main.humidity
         let dayFiveWind =  forecastRaw.list[32].wind.speed
         let dayFiveTime = forecastRaw.list[32].dt
-        console.log (dayFiveTime)
+       
+        var dayFiveDate= moment.unix(dayFiveTime).format("MM/DD/YYYY");
+        console.log (dayFiveDate)
 
         //day 6
         let daySixWeather = forecastRaw.list[39].weather[0].main
@@ -176,10 +177,23 @@ function getForecast() {
         let daySixHumid = forecastRaw.list[39].main.humidity
         let daySixWind =  forecastRaw.list[39].wind.speed
         let daySixTime = forecastRaw.list[39].dt
-        console.log (daySixTime)
+        
+        var daySixDate= moment.unix(daySixTime).format("MM/DD/YYYY");
+        console.log (daySixDate)
 
+
+
+
+        renderResults()
+
+
+        function renderResults() {
+          $("#date-1").text(dayOneDate + dayOneTemp +"F" )
+        }
 
 
       });
     };
     
+
+
