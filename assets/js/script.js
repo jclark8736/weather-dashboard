@@ -7,7 +7,7 @@
 
 
 //http://api.openweathermap.org/data/2.5/forecast?q=newark&appid=c72883e6c6cd92c5004094d3728064f1 5 day forecast syntax
-
+//http://api.openweathermap.org/data/2.5/forecast?q=&units=imperial&appid=c72883e6c6cd92c5004094d3728064f1
 
 var currentTime = moment().format("MM D YYYY hh:mm");
 
@@ -18,11 +18,13 @@ var forecastData = {};
 var forecastRaw;
 var forecastData5 = {};
 let test;
+var buttonEl = document.getElementById("submit-btn");
 
 
 
-$("submit-btn").on("click", function() {
-  city = cityEl.textContent;
+$("#submit-btn").on("click", function() {
+  city=cityEl.value
+  console.log(city)
   getForecast()
 }
 );
@@ -91,9 +93,18 @@ let dayFiveWind;
 let dayFiveTime;
 
 
-var city;
+// day 6
+let daySixWeather;
+let daySixTemp;
+let daySixHumid;
+let daySixWind;
+let daySixTime;
+
+
+
 var urlOne = "http://api.openweathermap.org/data/2.5/forecast?q="
 var urlTwo = "&units=imperial&appid=c72883e6c6cd92c5004094d3728064f1";
+
 
 
 
@@ -158,6 +169,14 @@ function getForecast() {
         let dayFiveWind =  forecastRaw.list[32].wind.speed
         let dayFiveTime = forecastRaw.list[32].dt
         console.log (dayFiveTime)
+
+        //day 6
+        let daySixWeather = forecastRaw.list[39].weather[0].main
+        let daySixTemp = forecastRaw.list[39].main.temp
+        let daySixHumid = forecastRaw.list[39].main.humidity
+        let daySixWind =  forecastRaw.list[39].wind.speed
+        let daySixTime = forecastRaw.list[39].dt
+        console.log (daySixTime)
 
 
 
