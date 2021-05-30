@@ -21,7 +21,7 @@ let test;
 var buttonEl = document.getElementById("submit-btn");
 var dateString
 
-
+//This button is connected to the search text input and runs the function to get data from the API
 $("#submit-btn").on("click", function() {
   city=cityEl.value
   console.log(city)
@@ -188,8 +188,17 @@ function getForecast() {
 
 
         function renderResults() {
-          $("#date-1").text(dayOneDate + dayOneTemp +"F" )
-        }
+          //day 1
+          $("#date-1").text(dayOneDate +    "  " + city)
+          $("#temp-1").text(dayOneTemp + "F")
+          $("#weather-1").text("Weather/Precipitation:   " + dayOneWeather + "The Humidity is currently   " + dayOneHumid + "         The wind speed is  " + dayOneWind)
+
+          //day 2
+          $("#date-1").text(dayOneDate +    "  " + city)
+          $("#temp-1").text(dayOneTemp + "F")
+          $("#weather-1").text("Weather/Precipitation:   " + dayOneWeather + "The Humidity is currently   " + dayOneHumid + "         The wind speed is  " + dayOneWind)
+
+        } 
 
 
       });
