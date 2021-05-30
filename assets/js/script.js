@@ -1,4 +1,5 @@
 //openweather api key c72883e6c6cd92c5004094d3728064f1
+//URL var url = "http://api.openweathermap.org/data/2.5/forecast?q=newark&units=imperial&appid=c72883e6c6cd92c5004094d3728064f1";
 
 //call for latitute/longitude
 //https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}
@@ -10,13 +11,28 @@
 
 var currentTime = moment().format("MM D YYYY hh:mm");
 
+
+
+var cityEl = document.getElementById("search-text")
 var forecastData = {};
 var forecastRaw;
 var forecastData5 = {};
 let test;
+
+
+
+$("submit-btn").on("click", function() {
+  city = cityEl.textContent;
+  getForecast()
+}
+);
+
 //
 // var cityLat = forecastRaw.city.coord.lat;
 // var cityLong= forecastRaw.city.coord.long
+
+
+
 
 
 
@@ -75,7 +91,9 @@ let dayFiveWind;
 let dayFiveTime;
 
 
-
+var city;
+var urlOne = "http://api.openweathermap.org/data/2.5/forecast?q="
+var urlTwo = "&units=imperial&appid=c72883e6c6cd92c5004094d3728064f1";
 
 
 
@@ -84,7 +102,7 @@ let dayFiveTime;
 
 
 function getForecast() {
-    var url = "http://api.openweathermap.org/data/2.5/forecast?q=newark&units=imperial&appid=c72883e6c6cd92c5004094d3728064f1";
+    var url = urlOne + city + urlTwo;
     fetch(url)
       .then(function (response) {
         if (!response.ok) {
