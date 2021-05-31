@@ -35,61 +35,6 @@ $("#submit-btn").on("click", function() {
 
 
 
-
-
-//DELETE LATER
-//day 1
-let dayOneWeather;
-let dayOneTemp;
-let dayOneHumid;
-let dayOneWind;
-let dayOneTime;
-
-
-//day 2
-let dayTwoWeather;
-let dayTwoTemp;
-let dayTwoHumid;
-let dayTwoWind;
-let dayTwoTime;
-
-
-//day 3
-let dayThreeWeather;
-let dayThreeTemp;
-let dayThreeHumid;
-let dayThreeWind;
-let dayThreeTime;
-
-
-
-//day 4
-let dayFourWeather;
-let dayFourTemp;
-let dayFourHumid;
-let dayFourWind;
-let dayFourTime;
-
-
-
-
-//day 5
-let dayFiveWeather;
-let dayFiveTemp;
-let dayFiveHumid;
-let dayFiveWind;
-let dayFiveTime;
-
-
-// day 6
-let daySixWeather;
-let daySixTemp;
-let daySixHumid;
-let daySixWind;
-let daySixTime;
-
-
-
 var urlOne = "http://api.openweathermap.org/data/2.5/forecast?q="
 var urlTwo = "&units=imperial&appid=c72883e6c6cd92c5004094d3728064f1";
 
