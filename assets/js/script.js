@@ -40,8 +40,9 @@ var urlTwo = "&units=imperial&appid=c72883e6c6cd92c5004094d3728064f1";
 
 
 //UV INDEX CALL https://api.openweathermap.org/data/2.5/onecall?lat=40.7143&lon=-74.006&exclude={part}&appid=c72883e6c6cd92c5004094d3728064f1
-
-
+var urlThree = "https://api.openweathermap.org/data/2.5/onecall?lat="
+var urlFour = "&lon="
+var urlFive="&exclude={part}&appid=c72883e6c6cd92c5004094d3728064f1"
 
 
 //grab 5 day forecast
@@ -60,6 +61,56 @@ function getForecast() {
         forecastData = JSON.stringify(locRes);
         console.log(locRes)
         forecastRaw = locRes;
+        //pulling out longitude/latitude values for second query
+        var cityLat = forecastRaw.city.coord.lat;
+        var cityLon= forecastRaw.city.coord.lon
+        console.log(cityLon);
+        console.log(cityLat);
+        var urlCoord= urlThree + cityLat + urlFour + cityLon + urlFive
+
+        //FUNCTION TO GET UV DATA
+        fetch(urlCoord)
+        .then(function(response){
+            if (!response.ok) {
+                throw response.json();
+              }
+              return response.json();
+            })
+            .then(function (locResCoord) {
+              forecastDataCoord = JSON.stringify(locResCoord);
+              console.log(locResCoord)
+              forecastRawCoord = locResCoord
+              console.log("TEST123!!")
+              console.log(forecastRawCoord)
+              
+              
+              
+              var dayOneUv = forecastRawCoord.daily[0].uvi
+              var dayTwoUv = forecastRawCoord.daily[1].uvi
+              var dayThreeUv = forecastRawCoord.daily[2].uvi
+              var dayFourUv = forecastRawCoord.daily[3].uvi
+              var dayFiveUv = forecastRawCoord.daily[4].uvi
+              var daySixUv = forecastRawCoord.daily[5].uvi
+              //renders UV values to page
+              $("#uv-1").text("The UV index is :" + dayOneUv)
+              $("#uv-2").text("The UV index will be :" + dayTwoUv)
+              $("#uv-3").text("The UV index will be :" + dayThreeUv)
+              $("#uv-4").text("The UV index will be :" + dayFourUv)
+              $("#uv-5").text("The UV index will be :" + dayFiveUv)
+              $("#uv-6").text("The UV index will be :" + daySixUv)
+
+
+              
+              
+
+
+        })
+
+
+
+
+
+
         //day 1
         let dayOneWeather = forecastRaw.list[0].weather[0].main
         let dayOneTemp = forecastRaw.list[0].main.temp
@@ -67,7 +118,9 @@ function getForecast() {
         let dayOneWind =  forecastRaw.list[0].wind.speed
         let dayOneTime = forecastRaw.list[0].dt
         var dayOneDate= moment.unix(dayOneTime).format("MM/DD/YYYY");
-        console.log (dayOneDate)
+        
+
+        
 
 
 
