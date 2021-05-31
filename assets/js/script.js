@@ -118,6 +118,7 @@ function getForecast() {
         let dayOneWind =  forecastRaw.list[0].wind.speed
         let dayOneTime = forecastRaw.list[0].dt
         var dayOneDate= moment.unix(dayOneTime).format("MM/DD/YYYY");
+        localStorage.setItem(dayOneWeather, dayOneTemp, dayOneHumid, dayOneWind)
         
 
         
@@ -136,7 +137,8 @@ function getForecast() {
         let dayTwoTime = forecastRaw.list[8].dt
         
         var dayTwoDate= moment.unix(dayTwoTime).format("MM/DD/YYYY");
-        console.log (dayTwoDate)
+        
+        
 
 
         //day 3
@@ -147,7 +149,7 @@ function getForecast() {
         let dayThreeTime = forecastRaw.list[16].dt
         
         var dayThreeDate= moment.unix(dayThreeTime).format("MM/DD/YYYY");
-        console.log (dayThreeDate)
+        
 
         // day 4
         let dayFourWeather = forecastRaw.list[24].weather[0].main
