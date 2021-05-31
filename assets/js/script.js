@@ -129,7 +129,7 @@ function getForecast() {
 
 
         //day 2
-        let dayTwoWeather = forecastRaw.list[8].weather[0].main.temp
+        let dayTwoWeather = forecastRaw.list[8].weather[0].main
         let dayTwoTemp = forecastRaw.list[8].main.temp
         let dayTwoHumid = forecastRaw.list[8].main.humidity
         let dayTwoWind =  forecastRaw.list[8].wind.speed
@@ -189,14 +189,257 @@ function getForecast() {
 
         function renderResults() {
           //day 1
+          //The first part of these statements displays the values from the API query. The second part is an if/then statement that displays images based on the text of those queries
           $("#date-1").text(dayOneDate +    "  " + city)
           $("#temp-1").text(dayOneTemp + "F")
-          $("#weather-1").text("Weather/Precipitation:   " + dayOneWeather + "The Humidity is currently   " + dayOneHumid + "         The wind speed is  " + dayOneWind)
+          $("#weather-1").text("Weather/Precipitation:   " + dayOneWeather + "   The Humidity is currently :    " + dayOneHumid + "         The wind speed is : " + dayOneWind + "mph")
+          console.log(dayOneWeather)
+          
+          if (dayOneWeather.includes("ain")) {
+            console.log("TRUE!")
+            $("#icon-1").attr("src", "assets/images/rain.png");
+            
+          }
+          if (dayOneWeather.includes("Cloud")) {
+            
+            $("#icon-1").attr("src", "assets/images/cloudy.png");
+            
+          }
+          if (dayOneWeather.includes("cloudy")) {
+            
+            $("#icon-1").attr("src", "assets/images/partlycloudy.png");
+            
+          }
+          if (dayOneWeather.includes("Snow")) {
+            
+            $("#icon-1").attr("src", "assets/images/snowy.png");
+            
+          }
+          if (dayOneWeather.includes("hunder")) {
+            
+            $("#icon-1").attr("src", "assets/images/thunderstorm.png");
+            
+          }
+          if (dayOneWeather.includes("Clear")) {
+            
+            $("#icon-1").attr("src", "assets/images/sunny.png");
+            
+          }
+          if (dayOneWeather.includes("Sun")) {
+            
+            $("#icon-1").attr("src", "assets/images/sunny.png");
+            
+          }
 
+
+            //if (dayOneWeather)
           //day 2
-          $("#date-1").text(dayOneDate +    "  " + city)
-          $("#temp-1").text(dayOneTemp + "F")
-          $("#weather-1").text("Weather/Precipitation:   " + dayOneWeather + "The Humidity is currently   " + dayOneHumid + "         The wind speed is  " + dayOneWind)
+          $("#date-2").text(dayTwoDate +    "  " + city)
+          $("#temp-2").text(dayTwoTemp + "F")
+          $("#weather-2").text("Weather/Precipitation:   " + dayTwoWeather + "   The Humidity is currently :    " + dayTwoHumid + "         The wind speed is : " + dayTwoWind + "mph")
+          if (dayTwoWeather.includes("ain")) {
+            
+            $("#icon-2").attr("src", "assets/images/rain.png");
+            
+          }
+          if (dayTwoWeather.includes("Cloud")) {
+            
+            $("#icon-2").attr("src", "assets/images/cloudy.png");
+            
+          }
+          if (dayTwoWeather.includes("cloudy")) {
+            
+            $("#icon-2").attr("src", "assets/images/partlycloudy.png");
+            
+          }
+          if (dayTwoWeather.includes("Snow")) {
+            
+            $("#icon-2").attr("src", "assets/images/snowy.png");
+            
+          }
+          if (dayTwoWeather.includes("hunder")) {
+           
+            $("#icon-2").attr("src", "assets/images/thunderstorm.png");
+            
+          }
+          if (dayTwoWeather.includes("Clear")) {
+            
+            $("#icon-2").attr("src", "assets/images/sunny.png");
+            
+          }
+          if (dayTwoWeather.includes("Sun")) {
+            
+            $("#icon-2").attr("src", "assets/images/sunny.png");
+            
+          }
+
+          //day 3
+          $("#date-3").text(dayThreeDate +    "  " + city)
+          $("#temp-3").text(dayThreeTemp + "F")
+          $("#weather-3").text("Weather/Precipitation:   " + dayThreeWeather + "   The Humidity is currently :    " + dayThreeHumid + "         The wind speed is : " + dayThreeWind + "mph")
+          
+          if (dayThreeWeather.includes("ain")) {
+            console.log("TRUE!")
+            $("#icon-3").attr("src", "assets/images/rain.png");
+            
+          }
+          if (dayThreeWeather.includes("Cloud")) {
+            console.log("TRUE!")
+            $("#icon-3").attr("src", "assets/images/cloudy.png");
+            
+          }
+          if (dayThreeWeather.includes("cloudy")) {
+            console.log("TRUE!")
+            $("#icon-3").attr("src", "assets/images/partlycloudy.png");
+            
+          }
+          if (dayThreeWeather.includes("Snow")) {
+            console.log("TRUE!")
+            $("#icon-3").attr("src", "assets/images/snowy.png");
+            
+          }
+          if (dayThreeWeather.includes("hunder")) {
+            console.log("TRUE!")
+            $("#icon-3").attr("src", "assets/images/thunderstorm.png");
+            
+          }
+          if (dayThreeWeather.includes("Clear")) {
+            console.log("TRUE!")
+            $("#icon-3").attr("src", "assets/images/sunny.png");
+            
+          }
+          if (dayThreeWeather.includes("Sun")) {
+            console.log("TRUE!")
+            $("#icon-3").attr("src", "assets/images/sunny.png");
+            
+          }
+        
+          
+
+
+          //day 4
+          $("#date-4").text(dayFourDate +    "  " + city)
+          $("#temp-4").text(dayFourTemp + "F")
+          $("#weather-4").text("Weather/Precipitation:   " + dayFourWeather + "   The Humidity is currently :    " + dayFourHumid + "         The wind speed is : " + dayFourWind + "mph")
+          if (dayFourWeather.includes("ain")) {
+            console.log("TRUE!")
+            $("#icon-4").attr("src", "assets/images/rain.png");
+            
+          }
+          if (dayFourWeather.includes("Cloud")) {
+            console.log("TRUE!")
+            $("#icon-4").attr("src", "assets/images/cloudy.png");
+            
+          }
+          if (dayFourWeather.includes("cloudy")) {
+            console.log("TRUE!")
+            $("#icon-4").attr("src", "assets/images/partlycloudy.png");
+            
+          }
+          if (dayFourWeather.includes("Snow")) {
+            console.log("TRUE!")
+            $("#icon-4").attr("src", "assets/images/snowy.png");
+            
+          }
+          if (dayFourWeather.includes("hunder")) {
+            console.log("TRUE!")
+            $("#icon-4").attr("src", "assets/images/thunderstorm.png");
+            
+          }
+          if (dayFourWeather.includes("Clear")) {
+            console.log("TRUE!")
+            $("#icon-4").attr("src", "assets/images/sunny.png");
+            
+          }
+          if (dayFourWeather.includes("Sun")) {
+            console.log("TRUE!")
+            $("#icon-4").attr("src", "assets/images/sunny.png");
+            
+          }
+        
+
+
+          //day 5
+          $("#date-5").text(dayFiveDate +    "  " + city)
+          $("#temp-5").text(dayFiveTemp + "F")
+          $("#weather-5").text("Weather/Precipitation :   " + dayFiveWeather + "   The Humidity is currently :    " + dayFiveHumid + "         The wind speed is : " + dayFiveWind + "mph")
+          if (dayFiveWeather.includes("ain")) {
+            console.log("TRUE!")
+            $("#icon-5").attr("src", "assets/images/rain.png");
+            
+          }
+          if (dayFiveWeather.includes("Cloud")) {
+            console.log("TRUE!")
+            $("#icon-5").attr("src", "assets/images/cloudy.png");
+            
+          }
+          if (dayFiveWeather.includes("cloudy")) {
+            console.log("TRUE!")
+            $("#icon-5").attr("src", "assets/images/partlycloudy.png");
+            
+          }
+          if (dayFiveWeather.includes("Snow")) {
+            console.log("TRUE!")
+            $("#icon-5").attr("src", "assets/images/snowy.png");
+            
+          }
+          if (dayFiveWeather.includes("hunder")) {
+            console.log("TRUE!")
+            $("#icon-5").attr("src", "assets/images/thunderstorm.png");
+            
+          }
+          if (dayFiveWeather.includes("Clear")) {
+            console.log("TRUE!")
+            $("#icon-5").attr("src", "assets/images/sunny.png");
+            
+          }
+          if (dayFiveWeather.includes("Sun")) {
+            console.log("TRUE!")
+            $("#icon-5").attr("src", "assets/images/sunny.png");
+            
+          }
+        
+
+          //day 6
+          $("#date-6").text(daySixDate +    "  " + city)
+          $("#temp-6").text(daySixTemp + "F")
+          $("#weather-6").text("Weather/Precipitation:   " + daySixWeather + "   The Humidity is currently :    " + daySixHumid + "         The wind speed is : " + daySixWind + "mph")
+          if (daySixWeather.includes("ain")) {
+            console.log("TRUE!")
+            $("#icon-6").attr("src", "assets/images/rain.png");
+            
+          }
+          if (daySixWeather.includes("Cloud")) {
+            console.log("TRUE!")
+            $("#icon-6").attr("src", "assets/images/cloudy.png");
+            
+          }
+          if (daySixWeather.includes("cloudy")) {
+            console.log("TRUE!")
+            $("#icon-6").attr("src", "assets/images/partlycloudy.png");
+            
+          }
+          if (daySixWeather.includes("Snow")) {
+            console.log("TRUE!")
+            $("#icon-6").attr("src", "assets/images/snowy.png");
+            
+          }
+          if (daySixWeather.includes("hunder")) {
+            console.log("TRUE!")
+            $("#icon-6").attr("src", "assets/images/thunderstorm.png");
+            
+          }
+          if (daySixWeather.includes("Clear")) {
+            console.log("TRUE!")
+            $("#icon-6").attr("src", "assets/images/sunny.png");
+            
+          }
+          if (daySixWeather.includes("Sun")) {
+            console.log("TRUE!")
+            $("#icon-6").attr("src", "assets/images/sunny.png");
+            
+          }
+        
 
         } 
 

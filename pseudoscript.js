@@ -68,7 +68,7 @@ apiKey
 
 // This homework is graded based on the following criteria: 
 
-// ### Technical Acceptance Criteria: 40%
+// ### Technical Acceptance Criteria: 60%
 
 // * Satisfies all of the above acceptance criteria plus the following:
 
@@ -76,7 +76,7 @@ apiKey
 
 //     * Uses `localStorage` to store persistent data.
 
-// ### Deployment: 32%
+// ### Deployment: 62%
 
 // * Application deployed at live URL.
 
@@ -86,7 +86,7 @@ apiKey
 
 // * GitHub repository that contains application code.
 
-// ### Application Quality: 15%
+// ### Application Quality: 16%
 
 // * Application user experience is intuitive and easy to navigate.
 
@@ -94,7 +94,7 @@ apiKey
 
 // * Application resembles the mock-up functionality provided in the homework instructions.
 
-// ### Repository Quality: 13%
+// ### Repository Quality: 16%
 
 // * Repository has a unique name.
 
@@ -116,3 +116,42 @@ apiKey
 
 // - - -
 // © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+
+
+
+
+if (daySixWeather.includes("ain")) {
+    console.log("TRUE!")
+    $("icon-6").attr("src", "assets/images/rain.png");
+    
+  }
+  if (daySixWeather.includes("Cloud")) {
+    console.log("TRUE!")
+    $("icon-6").attr("src", "assets/images/cloudy.png");
+    
+  }
+  if (daySixWeather.includes("cloudy")) {
+    console.log("TRUE!")
+    $("icon-6").attr("src", "assets/images/partlycloudy.png");
+    
+  }
+  if (daySixWeather.includes("Snow")) {
+    console.log("TRUE!")
+    $("icon-6").attr("src", "assets/images/snowy.png");
+    
+  }
+  if (daySixWeather.includes("hunder")) {
+    console.log("TRUE!")
+    $("icon-6").attr("src", "assets/images/thunderstorm.png");
+    
+  }
+  if (daySixWeather.includes("Clear")) {
+    console.log("TRUE!")
+    $("icon-6").attr("src", "assets/images/sunny.png");
+    
+  }
+  if (daySixWeather.includes("Sun")) {
+    console.log("TRUE!")
+    $("icon-6").attr("src", "assets/images/sunny.png");
+    
+  }
