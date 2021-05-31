@@ -39,6 +39,8 @@ var urlOne = "http://api.openweathermap.org/data/2.5/forecast?q="
 var urlTwo = "&units=imperial&appid=c72883e6c6cd92c5004094d3728064f1";
 
 
+//UV INDEX CALL https://api.openweathermap.org/data/2.5/onecall?lat=40.7143&lon=-74.006&exclude={part}&appid=c72883e6c6cd92c5004094d3728064f1
+
 
 
 
