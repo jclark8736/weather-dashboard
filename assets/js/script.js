@@ -199,37 +199,37 @@ function getForecast() {
           
           if (dayOneWeather.includes("ain")) {
             console.log("TRUE!")
-            $("#icon-1").attr("src", "assets/images/rain.png");
+            $("#icon-1").attr("src", "./assets/images/rain.png");
             
           }
           if (dayOneWeather.includes("Cloud")) {
             
-            $("#icon-1").attr("src", "assets/images/cloudy.png");
+            $("#icon-1").attr("src", "./assets/images/cloudy.png");
             
           }
           if (dayOneWeather.includes("cloudy")) {
             
-            $("#icon-1").attr("src", "assets/images/partlycloudy.png");
+            $("#icon-1").attr("src", "./assets/images/partlycloudy.png");
             
           }
           if (dayOneWeather.includes("Snow")) {
             
-            $("#icon-1").attr("src", "assets/images/snowy.png");
+            $("#icon-1").attr("src", "./assets/images/snowy.png");
             
           }
           if (dayOneWeather.includes("hunder")) {
             
-            $("#icon-1").attr("src", "assets/images/thunderstorm.png");
+            $("#icon-1").attr("src", "./assets/images/thunderstorm.png");
             
           }
           if (dayOneWeather.includes("Clear")) {
             
-            $("#icon-1").attr("src", "assets/images/sunny.png");
+            $("#icon-1").attr("src", "./assets/images/sunny.png");
             
           }
           if (dayOneWeather.includes("Sun")) {
             
-            $("#icon-1").attr("src", "assets/images/sunny.png");
+            $("#icon-1").attr("src", "./assets/images/sunny.png");
             
           }
 
@@ -241,37 +241,37 @@ function getForecast() {
           $("#weather-2").text("Weather/Precipitation:   " + dayTwoWeather + "   The Humidity is currently :    " + dayTwoHumid + "         The wind speed is : " + dayTwoWind + "mph")
           if (dayTwoWeather.includes("ain")) {
             
-            $("#icon-2").attr("src", "assets/images/rain.png");
+            $("#icon-2").attr("src", "./assets/images/rain.png");
             
           }
           if (dayTwoWeather.includes("Cloud")) {
             
-            $("#icon-2").attr("src", "assets/images/cloudy.png");
+            $("#icon-2").attr("src", "./assets/images/cloudy.png");
             
           }
           if (dayTwoWeather.includes("cloudy")) {
             
-            $("#icon-2").attr("src", "assets/images/partlycloudy.png");
+            $("#icon-2").attr("src", "./assets/images/partlycloudy.png");
             
           }
           if (dayTwoWeather.includes("Snow")) {
             
-            $("#icon-2").attr("src", "assets/images/snowy.png");
+            $("#icon-2").attr("src", "./assets/images/snowy.png");
             
           }
           if (dayTwoWeather.includes("hunder")) {
            
-            $("#icon-2").attr("src", "assets/images/thunderstorm.png");
+            $("#icon-2").attr("src", "./assets/images/thunderstorm.png");
             
           }
           if (dayTwoWeather.includes("Clear")) {
             
-            $("#icon-2").attr("src", "assets/images/sunny.png");
+            $("#icon-2").attr("src", "./assets/images/sunny.png");
             
           }
           if (dayTwoWeather.includes("Sun")) {
             
-            $("#icon-2").attr("src", "assets/images/sunny.png");
+            $("#icon-2").attr("src", "./assets/images/sunny.png");
             
           }
 
@@ -282,37 +282,37 @@ function getForecast() {
           
           if (dayThreeWeather.includes("ain")) {
             console.log("TRUE!")
-            $("#icon-3").attr("src", "assets/images/rain.png");
+            $("#icon-3").attr("src", "./assets/images/rain.png");
             
           }
           if (dayThreeWeather.includes("Cloud")) {
             console.log("TRUE!")
-            $("#icon-3").attr("src", "assets/images/cloudy.png");
+            $("#icon-3").attr("src", "./assets/images/cloudy.png");
             
           }
           if (dayThreeWeather.includes("cloudy")) {
             console.log("TRUE!")
-            $("#icon-3").attr("src", "assets/images/partlycloudy.png");
+            $("#icon-3").attr("src", "./assets/images/partlycloudy.png");
             
           }
           if (dayThreeWeather.includes("Snow")) {
             console.log("TRUE!")
-            $("#icon-3").attr("src", "assets/images/snowy.png");
+            $("#icon-3").attr("src", "./assets/images/snowy.png");
             
           }
           if (dayThreeWeather.includes("hunder")) {
             console.log("TRUE!")
-            $("#icon-3").attr("src", "assets/images/thunderstorm.png");
+            $("#icon-3").attr("src", "./assets/images/thunderstorm.png");
             
           }
           if (dayThreeWeather.includes("Clear")) {
             console.log("TRUE!")
-            $("#icon-3").attr("src", "assets/images/sunny.png");
+            $("#icon-3").attr("src", "./assets/images/sunny.png");
             
           }
           if (dayThreeWeather.includes("Sun")) {
             console.log("TRUE!")
-            $("#icon-3").attr("src", "assets/images/sunny.png");
+            $("#icon-3").attr("src", "./assets/images/sunny.png");
             
           }
         
@@ -325,17 +325,17 @@ function getForecast() {
           $("#weather-4").text("Weather/Precipitation:   " + dayFourWeather + "   The Humidity is currently :    " + dayFourHumid + "         The wind speed is : " + dayFourWind + "mph")
           if (dayFourWeather.includes("ain")) {
             console.log("TRUE!")
-            $("#icon-4").attr("src", "assets/images/rain.png");
+            $("#icon-4").attr("src", "./assets/images/rain.png");
             
           }
           if (dayFourWeather.includes("Cloud")) {
             console.log("TRUE!")
-            $("#icon-4").attr("src", "assets/images/cloudy.png");
+            $("#icon-4").attr("src", "./assets/images/cloudy.png");
             
           }
           if (dayFourWeather.includes("cloudy")) {
             console.log("TRUE!")
-            $("#icon-4").attr("src", "assets/images/partlycloudy.png");
+            $("#icon-4").attr("src", "./assets/images/partlycloudy.png");
             
           }
           if (dayFourWeather.includes("Snow")) {
@@ -345,17 +345,17 @@ function getForecast() {
           }
           if (dayFourWeather.includes("hunder")) {
             console.log("TRUE!")
-            $("#icon-4").attr("src", "assets/images/thunderstorm.png");
+            $("#icon-4").attr("src", "./assets/images/thunderstorm.png");
             
           }
           if (dayFourWeather.includes("Clear")) {
             console.log("TRUE!")
-            $("#icon-4").attr("src", "assets/images/sunny.png");
+            $("#icon-4").attr("src", "./assets/images/sunny.png");
             
           }
           if (dayFourWeather.includes("Sun")) {
             console.log("TRUE!")
-            $("#icon-4").attr("src", "assets/images/sunny.png");
+            $("#icon-4").attr("src", "./assets/images/sunny.png");
             
           }
         
