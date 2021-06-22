@@ -2,98 +2,98 @@
 
 
 
-var currentTime = moment().format("MM D YYYY hh:mm");
+// var currentTime = moment().format("MM D YYYY hh:mm");
 
 
 
-var cityEl = document.getElementById("search-text")
-var forecastData = {};
-var forecastRaw;
-var forecastData5 = {};
-let test;
-var buttonEl = document.getElementById("submit-btn");
-var dateString
+// var cityEl = document.getElementById("search-text")
+// var forecastData = {};
+// var forecastRaw;
+// var forecastData5 = {};
+// let test;
+// var buttonEl = document.getElementById("submit-btn");
+// var dateString
 
-//This button is connected to the search text input and runs the function to get data from the API
-$("#submit-btn").on("click", function() {
-  city=cityEl.value
-  console.log(city)
-  getForecast()
-}
-);
+// //This button is connected to the search text input and runs the function to get data from the API
+// $("#submit-btn").on("click", function() {
+//   city=cityEl.value
+//   console.log(city)
+//   getForecast()
+// }
+// );
 
-//
-// var cityLat = forecastRaw.city.coord.lat;
-// var cityLong= forecastRaw.city.coord.long
-
-
-
-var urlOne = "http://api.openweathermap.org/data/2.5/forecast?q="
-var urlTwo = "&units=imperial&appid=c72883e6c6cd92c5004094d3728064f1";
-var city = "New York"
-
-//UV INDEX CALL https://api.openweathermap.org/data/2.5/onecall?lat=40.7143&lon=-74.006&exclude={part}&appid=c72883e6c6cd92c5004094d3728064f1
-
-var urlThree= "https://api.openweathermap.org/data/2.5/onecall?";
-var urlFour ="lat=40.7143&lon=-74.006&exclude={part}&appid=c72883e6c6cd92c5004094d3728064f1"
-var urlCoord = urlThree + urlFour;
+// //
+// // var cityLat = forecastRaw.city.coord.lat;
+// // var cityLong= forecastRaw.city.coord.long
 
 
 
-//grab 5 day forecast
+// var urlOne = "http://api.openweathermap.org/data/2.5/forecast?q="
+// var urlTwo = "&units=imperial&appid=c72883e6c6cd92c5004094d3728064f1";
+// var city = "New York"
+
+// //UV INDEX CALL https://api.openweathermap.org/data/2.5/onecall?lat=40.7143&lon=-74.006&exclude={part}&appid=c72883e6c6cd92c5004094d3728064f1
+
+// var urlThree= "https://api.openweathermap.org/data/2.5/onecall?";
+// var urlFour ="lat=40.7143&lon=-74.006&exclude={part}&appid=c72883e6c6cd92c5004094d3728064f1"
+// var urlCoord = urlThree + urlFour;
 
 
-function getForecast() {
-    var url = urlOne + city + urlTwo;
-    fetch(url)
-      .then(function (response) {
-        if (!response.ok) {
-          throw response.json();
-        }
-        return response.json();
-      })
-      .then(function (locRes) {
-        forecastData = JSON.stringify(locRes);
-        console.log(locRes)
-        forecastRaw = locRes;
-         var cityLat = forecastRaw.city.coord.lat;
-        var cityLon= forecastRaw.city.coord.lon
-        console.log(cityLat)
-        console.log(cityLon)
-        fetch(urlCoord)
-        .then(function(response){
-            if (!response.ok) {
-                throw response.json();
-              }
-              return response.json();
-            })
-            .then(function (locResCoord) {
-              forecastDataCoord = JSON.stringify(locResCoord);
-              console.log(locResCoord)
-              forecastRawCoord = locResCoord
-              console.log("TEST123!!")
-              console.log(forecastRawCoord)
 
-        })
-      }
+// //grab 5 day forecast
+
+
+// function getForecast() {
+//     var url = urlOne + city + urlTwo;
+//     fetch(url)
+//       .then(function (response) {
+//         if (!response.ok) {
+//           throw response.json();
+//         }
+//         return response.json();
+//       })
+//       .then(function (locRes) {
+//         forecastData = JSON.stringify(locRes);
+//         console.log(locRes)
+//         forecastRaw = locRes;
+//          var cityLat = forecastRaw.city.coord.lat;
+//         var cityLon= forecastRaw.city.coord.lon
+//         console.log(cityLat)
+//         console.log(cityLon)
+//         fetch(urlCoord)
+//         .then(function(response){
+//             if (!response.ok) {
+//                 throw response.json();
+//               }
+//               return response.json();
+//             })
+//             .then(function (locResCoord) {
+//               forecastDataCoord = JSON.stringify(locResCoord);
+//               console.log(locResCoord)
+//               forecastRawCoord = locResCoord
+//               console.log("TEST123!!")
+//               console.log(forecastRawCoord)
+
+//         })
+//       }
       
-      )}
+//       )}
 
-      function getForecastCoord() {
-        var urlCoord = urlThree + urlFour;
-        fetch(url)
-          .then(function (response) {
-            if (!response.ok) {
-              throw response.json();
-            }
-            return response.json();
-          })
-          .then(function (locResCoord) {
-            forecastDataCoord = JSON.stringify(locResCoord);
-            console.log(locResCoord)
-            forecastRawCoord = locResCoord;
-          }
-          )}
+//       function getForecastCoord() {
+//         var urlCoord = urlThree + urlFour;
+//         fetch(url)
+//           .then(function (response) {
+//             if (!response.ok) {
+//               throw response.json();
+//             }
+//             return response.json();
+//           })
+//           .then(function (locResCoord) {
+//             forecastDataCoord = JSON.stringify(locResCoord);
+//             console.log(locResCoord)
+//             forecastRawCoord = locResCoord;
+//           }
+//           )}
         
         //day 1
         // let dayOneWeather = forecastRaw.list[0].weather[0].main
