@@ -35,7 +35,7 @@ $("#submit-btn").on("click", function() {
 
 
 
-var urlOne = "http://api.openweathermap.org/data/2.5/forecast?q="
+var urlOne = "https://api.openweathermap.org/data/2.5/forecast?q="
 var urlTwo = "&units=imperial&appid=c72883e6c6cd92c5004094d3728064f1";
 
 
